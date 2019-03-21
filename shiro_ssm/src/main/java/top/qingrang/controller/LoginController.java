@@ -22,6 +22,14 @@ public class LoginController {
 		Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken(name, password);
 		try {
+            System.out.println("UsernamePasswordToken:");
+            System.out.println("hashCode:" + token.hashCode());
+            System.out.println("Principal:" + token.getPrincipal());
+            System.out.println("Credentials:" + String.valueOf((char[]) token.getCredentials()));
+            System.out.println("host:" + token.getHost());
+            System.out.println("Username:" + token.getUsername());
+            System.out.println("Password:" + String.valueOf(token.getPassword()));
+            // 执行登录.
 			subject.login(token);
 			Session session = subject.getSession();
 			session.setAttribute("subject", subject);
