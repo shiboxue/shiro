@@ -33,7 +33,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- 启用 shiro 注解 -->
+    <!-- 启用 shiro 注解 --><!--使用代理的方式管理shiro的生命周期  -->
     <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
           depends-on="lifecycleBeanPostProcessor">
         <property name="proxyTargetClass" value="true"/>
