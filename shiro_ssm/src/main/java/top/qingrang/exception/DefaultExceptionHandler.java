@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @ControllerAdvice
 public class DefaultExceptionHandler {
 
-	@ExceptionHandler({UnauthorizedException.class})
+	@ExceptionHandler({UnauthorizedException.class})//处理异常的类型
 	@ResponseStatus(HttpStatus.UNAUTHORIZED)
 	public ModelAndView processUnauthenticatedException(NativeWebRequest request, UnauthorizedException e) {
 		ModelAndView mv = new ModelAndView();
