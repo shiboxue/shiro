@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("")
@@ -38,5 +39,12 @@ public class LoginController {
 			model.addAttribute("error", "验证失败");
 			return "login";
 		}
+	}
+	
+	@RequestMapping("ajax")
+	@ResponseBody
+	public String ajaxList(Model model) {
+		String data = "shiboxue";		
+		return data;
 	}
 }
