@@ -29,6 +29,7 @@
             <value>
                 <!-- anon 表示此地址不需要任何权限即可访问 -->
                 /login=anon
+                /ajax=anon
                 /index=anon
                 /static/**=anon
                 <!-- 权限配置，只允许 admin 访问 -->
